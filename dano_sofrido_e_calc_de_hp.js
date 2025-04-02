@@ -4,7 +4,7 @@ class personagem{
         this.hp = hp
     }
     escrever(){
-        console.log(`O personagem ${this.nome} de HP ${this.hp} entrou na partida`)
+        console.log(`O personagem ${this.nome} de HP ${this.hp} entrou na partida!`)
 }
     receberDano(dano){
         this.hp -= dano
@@ -23,7 +23,7 @@ class socoPersonagem{
     }
 
     ataque(personagem) {
-        console.log(`O personagem ${personagem.nome} recebeu um dano de ${this.socoFraco} e resultou em um dano de ${this.danoSocoFraco} HP`)
+        console.log(`O personagem ${personagem.nome} recebeu um dano de ${this.socoFraco} e resultou em um dano de ${this.danoSocoFraco} HP.`)
          personagem.receberDano(this.danoSocoFraco)
      }
      
@@ -31,6 +31,6 @@ class socoPersonagem{
 
 
 let statPersonagem = new personagem ("Ramon", 100)
-let atkPersonagem = new socoPersonagem("soco fraco", 40)
+let atkPersonagem = new socoPersonagem("soco fraco", 30)
 statPersonagem.escrever()
 atkPersonagem.ataque(statPersonagem)
